@@ -26,6 +26,7 @@ bool contains_subsequence( const needle_wrapper_t &needle,
             auto end_point{ chunk.end( ) };
             std::advance( end_point,  file.read_bytes_count( ) - needle_size );
             chunk.erase( end_point, chunk.end( ) );
+            return needle.is_subsequence_of( chunk );
         }
 
         if ( needle.is_subsequence_of( chunk ) ) {
