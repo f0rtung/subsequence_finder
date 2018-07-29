@@ -11,6 +11,7 @@ public:
 public:
     void read( char *buf, std::size_t size );
     std::size_t size( ) const noexcept;
+    bool empty( ) const noexcept;
     bool is_good( ) const;
     std::size_t read_bytes_count( ) const;
 

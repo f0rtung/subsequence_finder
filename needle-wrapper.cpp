@@ -22,7 +22,7 @@ void needle_wrapper_t::load_needle_from_file( const std::string &file_path )
 {
     binary_file_reader_t needle_file{ file_path };
 
-    if ( 0 == needle_file.size( ) ) {
+    if ( needle_file.empty( ) ) {
         throw std::runtime_error{ "Empty file \"" + file_path + "\"" };
     }
 

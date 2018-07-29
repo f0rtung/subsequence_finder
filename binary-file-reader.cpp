@@ -23,6 +23,11 @@ std::size_t binary_file_reader_t::size( ) const noexcept
     return bf_size_;
 }
 
+bool binary_file_reader_t::empty( ) const noexcept
+{
+    return 0 == bf_size_;
+}
+
 bool binary_file_reader_t::is_good( ) const
 {
     return bf_stream_.good( );
