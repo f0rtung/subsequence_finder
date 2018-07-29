@@ -4,11 +4,11 @@
 #include <iostream>
 #include <boost/program_options.hpp>
 
-boost::program_options::variables_map parse_command_line( int argc, char** argv )
+boost::program_options::variables_map parse_command_line( int argc, const char* const *argv )
 {
     namespace po = boost::program_options;
     po::variables_map vm;
-    po::options_description desc( "Options" );
+    po::options_description desc{ "Options" };
 
     try {
         desc.add_options( )
