@@ -11,8 +11,9 @@ file_paths_generator_t::file_paths_generator_t( const std::string &root_folder,
 bool file_paths_generator_t::is_appropriate_path( const boost::filesystem::path &path ) const
 {
     std::smatch what;
+    const std::string file_name{ path.filename( ).string( ) };  
     return boost::filesystem::is_regular_file( path ) &&
-           std::regex_match( path.filename( ).string( ), what, file_name_regex_ );
+           std::regex_match( file_name, what, file_name_regex_ );
 }
 
 std::string file_paths_generator_t::next_file_path( )
