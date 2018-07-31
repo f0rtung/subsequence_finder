@@ -4,7 +4,7 @@ file_writer_t::file_writer_t( const std::string &file_path )
 {
     file_stream_.open( file_path, std::ofstream::trunc );
     if ( !file_stream_ ) {
-        throw std::runtime_error{ "Can not opne file \"" + file_path + "\"" };
+        throw std::runtime_error{ "Can not open file \"" + file_path + "\"" };
     }
 }
 
